@@ -1,0 +1,21 @@
+# Java tests
+build_and_test_java:
+  stage: test_code
+  tags:
+    - docker
+    - self-host
+    - ubuntu
+  script:
+    # Prepare environment
+    - "apt update && apt install git -y"
+    # Check if cached directory exists and is not empty, else clone
+    - '[[ -d ".cloned_tests" && "$(ls -A .cloned_tests)" ]] || git clone $OOP_W1_TESTS .cloned_tests'
+    - cp -rf .cloned_tests/* .
+    # Compile and test Java code
+    - mvn compile test --batch-mode
+  artifacts:
+    when: always
+    paths:
+      - target/surefire-reports/*.xml
+    reports:
+      junit: target/surefire-reports/*.xml
