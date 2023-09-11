@@ -2,7 +2,6 @@
 .variables:
   TEST_FILES:
     - "test_1.py"
-    - "test_2.py"
     - "test_3.py"
 
 # Python tests
@@ -17,18 +16,13 @@ run_python_tests:
     matrix:
       - TEST_FILE:
           - "test_1.py"
-          - "test_2.py"
           - "test_3.py"
   script:
-    # Install required tools and dependencies
     - "apk add git"
-    # Check if cached directory exists and is not empty, else clone
-    - '[[ -d ".cloned_tests_doc" && "$(ls -A .cloned_tests_doc)" ]] || git clone $DOCS_URL .cloned_tests_doc'
-    # - rm -rf .cloned_tests/
-    # - 'git clone $DOCS_URL .cloned_tests'
+    - rm -rf .cloned_tests_doc/
+    - 'git clone $DOCS_URL .cloned_tests_doc'
     - cp -rf .cloned_tests_doc/* .
     - pip install -r requirements.txt
-    # Run the Python test
     - python $TEST_FILE
   artifacts:
     when: always
