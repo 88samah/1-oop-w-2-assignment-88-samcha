@@ -3,8 +3,8 @@ build_and_test_java:
   stage: test_code
   tags:
     - docker
-    - self-host
-    - ubuntu
+    - linux
+    - shared
   script:
     - "apt update && apt install git -y"
     - rm -rf .cloned_tests/

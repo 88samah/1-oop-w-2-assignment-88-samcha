@@ -9,8 +9,8 @@ run_python_tests:
   stage: test_doc
   tags:
     - docker
-    - self-host
-    - ubuntu
+    - linux
+    - shared
   image: python:3.11.4-alpine3.17
   parallel:
     matrix:
