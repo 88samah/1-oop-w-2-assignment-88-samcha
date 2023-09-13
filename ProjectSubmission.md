@@ -181,7 +181,7 @@ Lämna in uppgiften via GitHub-länk senast den `2023-09-14` kl. `23:59:59`.
 
 * Ni kan göra färdigt er uppgift efter deadline men ni hamnar sist i prioritering med att rättas.
 * Om ni inte lämnar in något alls får ni IG på er inlämning.
-* Ni kan komplettera er inlämning fram till `2023-10-14` därefter kan ni inte komplettera er inlämning.
+* Om ni inte lämnar in i tid får ni en ny inlämningsuppgift att göra med högsta möjliga betyg G.
 
 Frågor? Återkom till utbildaren via Google Meet/Teams/Discord eller maila mig på `marmed02@gafe.molndal.se`.
 
