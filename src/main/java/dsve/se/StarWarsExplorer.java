@@ -20,10 +20,14 @@ public class StarWarsExplorer {
         // 1. Kontrollera om skadenivån är mindre än eller lika med 50.
         // 2. Returnera sant om så är fallet, annars falskt.
 
-        boolean result = false;
-        return result;
+        if (damageLevel <= 50) {
+            System.out.println("Droid can be repaired.");
+            return true;
+        } else {
+            System.out.println("Droid cannot be repaired.");
+            return false;
+        }
     }
-
     /**
      * Beräknar antalet blasterskott som behövs för att besegra en Sith.
      *
@@ -31,14 +35,19 @@ public class StarWarsExplorer {
      * @return Antalet blasterskott som behövs.
      */
     public int defeatSith(int sithPower) {
+
         // Pseudokod:
         // 1. Initiera en variabel för antalet skott som 0.
         // 2. Loopa så länge Sithens kraft är större än 0:
         //    a. Minska Sithens kraft med 20.
         //    b. Öka antalet skott.
-
-        int result = 0;
-        return result;
+        int shots =0;
+        while(sithPower>0) {
+            sithPower-=20;
+            shots++;
+        }
+        System.out.println("Shots required to defeat Sith: " + shots);
+       return shots;
     }
 
     /**
@@ -55,9 +64,37 @@ public class StarWarsExplorer {
         //    a. Om numret är ett primtal, lägg till det i summan och öka räknevariabeln.
         //    b. Gå vidare till nästa nummer.
 
-        int result = 0;
-        return result;
-    }
+        int sum = 0;
+        int num = 2;
+        int count=0;
+
+        while (count< N) {
+            if (isPrime(num)) {
+                sum += num;
+                count++;
+            }
+            num++;
+            System.out.println("Sum of the first " + N + " prime numbers: " + sum); // Udskriv resultatet
+
+        }
+        return sum;
+        }
+
+        private boolean isPrime(int num) {
+        if (num <= 1) {
+            return false;
+
+                    }
+                    for (int i = 2; i * i <= num; i++) {
+                        if (num % i == 0) {
+                            return false;
+
+
+
+                        }
+                    }
+                    return true;
+                }
 
     /**
      * Returnerar kraftnivån för en Jedi baserat på antal års träning.
@@ -70,8 +107,16 @@ public class StarWarsExplorer {
         // 1. Om Jedi har tränat i 10 år eller mer är kraftnivån 100.
         // 2. Annars är kraftnivån 10 gånger antalet år tränade.
 
-        int result = 0;
-        return result;
+
+        int result;
+        if (years >= 10) {
+            result= 100;
+        } else {
+            result= 10 * years;
+        }
+        // Udskriv resultatet
+        System.out.println("Jediens kraftnivå efter " + years + " år træning: " + result);
+            return result;
+        }
     }
-}
 
