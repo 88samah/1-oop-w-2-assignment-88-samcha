@@ -1,10 +1,16 @@
 # Projekt Titel
 
-Temperature Converter
+StarWarsExplorer
 
 ## Beskrivning
+StarWarsExplorer är en Java-klass som erbjuder tre huvudfunktioner relaterade till Star Wars:
 
-Ge en kort beskrivning av ditt projekt och förklara vad det gör och dess syfte. Denna sektion bör ge potentiella användare en klar förståelse för projektets huvudfunktioner.
+**huvudfunktioner**
+- 1 canRepairDroid
+- 2 defeatSith
+- 3 sumOfPrimes
+  
+Syfte: StarWarsExplorer-projektet har tre tydliga syften. Det första syftet är att avgöra om en droid kan repareras baserat på dess skadenivå. Den andra funktionen är att beräkna antalet blasterskott som krävs för att besegra en Sith. Det tredje syftet är att hitta summan av de första N primtalen. Projektet är framtaget för programmerare och Star Wars-entusiaster som vill använda dessa specifika funktioner i sina projekt eller utforska Star Wars-världen genom kodning.
 
 ## Förutsättningar
 
@@ -15,7 +21,8 @@ List alla förutsättningar eller krav som användare måste ha installerade på
 
 ## Installation
 
-Ge instruktioner om hur man installerar ditt projekt på användarens system. Detta kan inkludera steg som:
+- Java Runtime Environment (JRE): Användare måste ha Java Runtime Environment (JRE) installerat på sina datorer. JRE är nödvändigt för att köra Java-program. Du kan hämta JRE från den officiella Java-webbplatsen och installera den enligt deras anvisningar.
+- Textredigeringsprogram: För att öppna och granska koden behöver användarna ett textredigeringsprogram som stöder Java-filer. Vanliga alternativ inkluderar Notepad, Visual Studio Code eller Sublime Text. Användare kan öppna Java-filerna i dessa program för att 
 
 1. Klona projektet: `git clone https://something`
 2. Byt till projektkatalogen: `cd mapp`
